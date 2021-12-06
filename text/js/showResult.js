@@ -69,15 +69,13 @@ function queryonegrade()
 	var msg='';
 	DB.transaction(function(tx){
 		tx.executeSql(
-			'select * from GRADE where SNAME=sname',
-			[],
+			'select * from GRADE where SNAME=?',
+			[sname],
 			function(tx,rs){
 			if(rs.rows.length>0)
-				{
-					
-					
-						msg += '学生姓名 : '+rs.rows.item.SNAME+ ' , 语文 : ' 
-						+rs.rows.item.CHINESE+ ' ,数学 : '+ rs.rows.item.MATH;
+				{				
+					msg += '学生姓名 : '+rs.rows.item(0).SNAME+ ' , 语文 : ' 
+						+rs.rows.item(0).CHINESE+ ' ,数学 : '+ rs.rows.item(0).MATH;
 
 					alert(msg);
 				}
