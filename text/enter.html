@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>成绩录入</title>
+<script src="js/jum.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/createDatabase.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/createTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/insertTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/showResult.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+
+
+<body>
+
+<div>
+ 		<center>
+		<h2></h2>
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td><input type="text" id="sname"/></td>
+			</tr>
+			<tr>
+				<td>语文分数</td>
+				<td><input type="text" id="chinese"/></td>
+			</tr>
+            <tr>
+				<td>数学分数</td>
+				<td><input type="text" id="math"/></td>
+			</tr>
+ 
+			<tr>
+				<td colspan="2" align="right">
+                    <input type="button" value="提交" onclick="adminInsertGrade()"/>
+                    <input type="button" value="查看成绩单" onclick="queryTotalgrade()"/>
+                    <input type="button" value="返回上一级" onclick="jumpSystem()"/>
+    
+				</td>
+			</tr>
+		</table>
+		</center>
+	</div>
+    
+     <div> 
+ <h5>11</h5>
+        <span id="gradeResult"></span><br>
+        
+ </div>
+</body>
+</html>

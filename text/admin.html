@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册页面</title>
+<script src="js/jum.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/createDatabase.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/createTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/insertTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/showResult.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+<div>
+ 		<center>
+		<h2>注册新用户</h2>
+		<table>
+			<tr>
+				<td>用户名</td>
+				<td><input type="text" id="username"/></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input type="password" id="password"/></td>
+			</tr>
+            <tr>
+				<td>身份</td>
+				<td><input type="text" id="occupation"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+                    <input type="button" value="注册teacher" onclick="adminInsertTeacher()"/>
+                     <input type="button" value="注册student" onclick="adminInsertStudent()"/>
+    				<input type="button" value="查看teacher id" onclick="queryTeacher()"/>
+                    <input type="button" value="查student id" onclick="queryStudent()"/>
+                    <input type="button" value="返回上一级" onclick="jumpSystem()"/>
+                    <input type="button" value="删除" onclick="drop()"/>
+				</td>
+			</tr>
+		</table>
+		</center>
+ </div>
+ <div> 
+ <h6>teacher id</h6>
+        <span id="teacherResult"></span><br>
+        
+ </div>
+ <div> 
+ <h6>student id</h6>
+        <span id="studentResult"></span><br>
+        
+ </div>
+</body>
+</html>

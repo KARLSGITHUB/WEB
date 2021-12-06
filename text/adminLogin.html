@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/jum.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/createDatabase.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/createTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/insertTable.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/showResult.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+<div>
+ 		<center>
+		<h2>admin登录页面</h2>
+		<table>
+			<tr>
+				<td>密码</td>
+				<td><input type="password" id="adminPassword"/></td>
+			</tr>
+ 
+			<tr>
+				<td colspan="2" align="right">
+                    <input type="button" value="登录" onclick="adminCheck()"/>
+    				<input type="button" value="返回上一级" onclick="jumpSystem()"/>
+				</td>
+			</tr>
+		</table>
+		</center>
+	</div>
+</body>
+</html>
