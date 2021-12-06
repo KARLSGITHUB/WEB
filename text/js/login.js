@@ -3,12 +3,12 @@
 function teacherlogin()
 {
 	createUserTable();
-	var teacherUsername = document.getElementById("teacherName").value;
+	var teacherUserName = document.getElementById("teacherName").value;
 	var teacherPassword = document.getElementById("teacherPassword").value;
 	DB.transaction(function(tx){
 		tx.executeSql(
 			'select * from TEACHER where TUSERNAME=? and TPASSWORD=?',
-			[teacherUsername,teacherPassword],
+			[teacherUserName,teacherPassword],
 			function(tx,rs){
 				if (rs.rows.length==0) //未查询到指定用户名与密码的用户信息
 				{
@@ -17,7 +17,7 @@ function teacherlogin()
 				else
 				{
 				
-					alert("您好老师！");
+					jumpenter();
 				}
 			}
 		);
@@ -42,7 +42,7 @@ function studentlogin()
 				else
 				{
 				
-					alert("您好同学！")
+					jumpquery();
 					
 				}
 			}
